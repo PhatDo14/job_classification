@@ -52,12 +52,12 @@ class ModelTrainer:
                 "Decision Tree": {
                     'criterion': ['gini', 'entropy', 'log_loss'],
                     # 'splitter':['best','random'],
-                    'max_depth':[None, 5, 10, 15],
+                     'max_depth':[None, 5, 10, 15],
                 },
                 "Random Forest": {
                     # 'criterion': ['gini', 'entropy', 'log_loss'],
                     # 'max_features':['sqrt','log2',None],
-                    'n_estimators': [10]#, 16, 32, 64, 128, 256]
+                    'n_estimators': [2]#, 16, 32, 64, 128, 256]
                 }
 
             }
@@ -87,7 +87,7 @@ class ModelTrainer:
             predicted = best_model.predict(X_test)
 
             recall = recall_score(y_test, predicted, average='weighted')
-            return recall,best_model_name
+            return recall,best_model_name,predicted
 
 
         except Exception as e:

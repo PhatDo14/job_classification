@@ -103,3 +103,7 @@ if __name__=="__main__":
     #
     modeltrainer = ModelTrainer()
     print(modeltrainer.initiate_model_trainer(train_arr, test_arr))
+    # _, _, res= modeltrainer.initiate_model_trainer(train_arr, test_arr)
+    # for i in range(len(res)):
+    #     print(res[i])
+    # print(res)
